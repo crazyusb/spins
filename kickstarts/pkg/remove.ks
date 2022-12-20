@@ -1,0 +1,15 @@
+%packages
+-abrt
+-gnome-abrt
+-ntp
+-system-config-date
+-system-config-firewall
+-system-config-firewall-base
+-system-config-firewall-tui
+-system-config-keyboard
+-system-config-language
+-system-config-services
+-system-config-users
+-gnome-terminal
+-gnome-terminal-nautilus
+%end

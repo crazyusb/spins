@@ -1,0 +1,10 @@
+%packages
+vim
+tmux
+git
+wget
+curl
+htop
+zsh
+python3-psutil
+%end
