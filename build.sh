@@ -1,7 +1,7 @@
 #!/bin/bash
 # Description: This script is used to build image for Custom Fedora ISO
 # Path: build-iso.sh
-
+set -ex
 # Export variables:
 
 VERBOSE=0
