@@ -2,7 +2,6 @@
 # http://fedoraproject.org/wiki/Workstation
 # mailto:desktop@lists.fedoraproject.org
 
-%include ../fedora/fedora-live-workstation.ks
 %include gnome-packages.ks
 
 %post

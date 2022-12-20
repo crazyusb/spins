@@ -27,13 +27,18 @@ gnome-initial-setup
 -totem
 clapper
 @^workstation-product-environment
--gedit
+gedit
 
 # Extra ricing
 gnome-extensions-app
 gnome-shell-extension-pop-shell
 pop-launcher
 xprop
+gnome-shell-extension-appindicator
+
+tilix
+tilix-nautilus
+gnome-tweaks
 gnome-shell-extension-appindicator
 
 %end

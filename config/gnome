@@ -1,4 +1,4 @@
 variant_name="gnome"
 variant_short="G"
 variant_type=iso
-kickstart_path="kickstarts/fedora/fedora-live-workstation.ks"
+kickstart_path="kickstarts/gnome.ks"
