@@ -1,5 +1,6 @@
 #%include ../../base/base.ks
 %include budgie-packages.ks
+%include budgie-desktop.ks
 
 services --disabled=gdm
 %post

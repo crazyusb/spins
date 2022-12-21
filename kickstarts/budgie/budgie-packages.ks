@@ -45,10 +45,7 @@ fluent-icon-theme
 
 #install budgie
 xorg-x11-server-Xorg
-budgie-desktop
-budgie-extras
-budgie-extras-daemon
-budgie-desktop-view
+
 #funny theme
 
 %end
