@@ -26,7 +26,6 @@ gedit
 gedit-color-schemes
 file-roller
 evince
-evince-nautilus
 seahorse
 gnome-sound-recorder
 gnome-disk-utility
