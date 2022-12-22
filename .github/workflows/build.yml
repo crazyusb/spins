@@ -1,10 +1,10 @@
 name: Build ISO images
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'kickstarts/**'
+  #  push:
+  #    branches:
+  #      - main
+  #    paths:
+  #      - 'kickstarts/**'
   workflow_dispatch:
 
 jobs:
