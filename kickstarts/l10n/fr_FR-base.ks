@@ -5,7 +5,7 @@
 %include fr_FR-support.ks
 
 lang fr_FR.UTF-8 --addsupport=fr_FR.UTF-8
-keyboard --xlayouts=es --vckeymap=fr
+keyboard --xlayouts=fr --vckeymap=fr
 timezone Europe/Paris
 
 %post
@@ -14,7 +14,7 @@ echo ""
 echo "POST fr_FR-base **************************************"
 echo ""
 
-# Set spanish locale
+# Set French locale
 cat >> /etc/rc.d/init.d/livesys << EOF_LIVESYS
 
 # Force French keyboard layout (rhb #982394)
