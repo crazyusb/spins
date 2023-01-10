@@ -1,5 +1,5 @@
 %packages
--abrt
+#-abrt
 -gnome-abrt
 -ntp
 -system-config-date
