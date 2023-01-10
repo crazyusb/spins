@@ -1,5 +1,5 @@
 %packages
-"@libreoffice"
+libreoffice-*
 libreoffice-langpack-en
 libreoffice-ogltrans
 libreoffice-opensymbol-fonts
