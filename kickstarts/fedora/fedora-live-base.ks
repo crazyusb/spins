@@ -7,9 +7,6 @@
 # Does includes "default" language configuration (kickstarts including
 # this template can override these settings)
 
-#lang en_US.UTF-8
-#keyboard us
-#timezone US/Eastern
 %include ../l10n/fr_FR-support.ks
 %include ../l10n/fr_FR-base.ks
 selinux --enforcing
