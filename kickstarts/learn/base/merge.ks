@@ -1,8 +1,8 @@
-%include base/boot.ks
-%include base/conf.ks
-%include base/user.ks
-#%include base/post.ks
-%include base/repo.ks
+%include boot.ks
+%include conf.ks
+%include user.ks
+#%include post.ks
+%include repo.ks
 
 %post
 # Enable livesys services
