@@ -1,5 +1,5 @@
 %packages
-fedora-release-budgie
+#fedora-release-budgie
 
 # Exclude unwanted groups that fedora-live-base.ks pulls in
 -@dial-up
