@@ -13,7 +13,7 @@ jobs:
           - x86_64
         variant:
           - budgie
-#          - gnome
+          - gnome
     steps:
       - uses: actions/checkout@v2
       - name: Download artifacts from build
