@@ -1,3 +1,3 @@
 #base
 %include fedora-kickstarts/fedora-live-budgie.ks
-%include lang/fr_FR.ks
+%include l10n/fr_FR-base.ks
