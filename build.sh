@@ -1,16 +1,21 @@
-#!/bin/bash
-# Description: This script is used to build image for Custom Fedora ISO
-# Path: build-iso.sh
-set -ex
-# Export variables:
+#!/usr/bin/bash -x
+
+### Fedora Linux Image build script
+# This script is used to build image for Fedora Linux.
+# It is a part of Fedora Linux project.
+
+# See LICENSE file for license information.
 
 VERBOSE=0
+PUSH=0
+# get releasever from /etc/os-release
 arch=$(uname -m)
-PROJECT="Fedora custom"
-PROJECT_SHORT="fedora-custom"
-RELEASE="0.1"
+PROJECT="Fedora Linux"
+PROJECT_SHORT="fedora"
+RELEASE="1.0"
 
 : "${releasever:=$(grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"')}"
+
 
 OUTPUT_DIR="build"
 
@@ -27,6 +32,14 @@ debug() {
     fi
 }
 
+help() {
+    echo "\
+    $0 - Fedora Linux Image builder script
+    This bash script is used to build Fedora Linux images.
+    "
+}
+
+
 invalid_option() {
     echo "Invalid option: $1"
     echo "Try '$0 --help' for more information."
@@ -39,7 +52,6 @@ error() {
 
 EXTRA_ARGS=""
 
-
 parse_variant_type() {
     # use a case statement to parse the variant type
     case $1 in
@@ -50,6 +62,10 @@ parse_variant_type() {
         EXTRA_ARGS+=" --iso-only"
         ISO_NAME="${PROJECT_SHORT}-${variant_name}-${arch}-$(date +%Y%m%d).iso"
         EXTRA_ARGS+=" --iso-name $ISO_NAME"
+        if [[ $(arch) == aarch64 ]];
+        then
+            EXTRA_ARGS+=" --nomacboot"
+        fi
         ;;
     *)
         echo "Invalid variant type: $1"
@@ -79,9 +95,7 @@ lmc_builder() {
 
     echo $EXTRA_ARGS
 
-
     ksflatten -c $kickstart_path -o $OUTPUT_DIR/${variant_name}-flattened.ks
-
 
     sudo livemedia-creator --make-${build_type} \
         --no-virt \
@@ -129,12 +143,16 @@ do
         VERBOSE=1
         shift
         ;;
-
-    -va | --variant)
-        VARIANT=$2
-        echo "variant: $VARIANT"
-        shift 2
+    -p | --push)
+        PUSH=1
+        shift
         ;;
+
+    # -v | --variant)
+    #     VARIANT=$2
+    #     echo "variant: $VARIANT"
+    #     shift 2
+    #     ;;
 
     # positional args
     *)
@@ -150,8 +168,6 @@ do
         ;;
     esac
 done
-
-
 
 # usage
 build

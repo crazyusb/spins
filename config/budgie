@@ -1,4 +1,4 @@
 variant_name="budgie"
 variant_short="B"
 variant_type=iso
-kickstart_path="kickstarts/fedora-kickstarts/fedora-live-budgie.ks"
+kickstart_path="kickstarts/budgie.ks"
