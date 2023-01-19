@@ -1,6 +1,6 @@
 %packages
--abrt
--gnome-abrt
+#-abrt
+#-gnome-abrt
 -ntp
 -system-config-date
 -system-config-firewall
