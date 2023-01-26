@@ -104,7 +104,7 @@ lmc_builder() {
         --fs-label "$PROJECT_SHORT-$variant_short-$arch" \
         --project "$PROJECT" \
         --releasever $releasever \
-        --isfinal \
+#        --isfinal \
         --release $RELEASE \
         --variant $variant_name $EXTRA_ARGS || exit 1
 
