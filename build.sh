@@ -8,14 +8,11 @@
 
 VERBOSE=0
 PUSH=0
-# get releasever from /etc/os-release
 arch=$(uname -m)
 PROJECT="Fedora Linux"
 PROJECT_SHORT="fedora"
 RELEASE="1.0"
-
-: "${releasever:=$(grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"')}"
-
+releasever="37"
 
 OUTPUT_DIR="build"
 
