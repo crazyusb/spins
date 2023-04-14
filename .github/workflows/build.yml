@@ -16,9 +16,7 @@ jobs:
         arch:
           - x86_64
         variant:
-#          - budgie
-          - gnome
-#          - workstation
+          - budgie
     container:
       image: fedora:37
       options: --cap-add=SYS_ADMIN --privileged

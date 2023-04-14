@@ -1,5 +1,5 @@
 %packages
-#fedora-release-budgie
+fedora-release-budgie
 
 # Exclude unwanted groups that fedora-live-base.ks pulls in
 -@dial-up
@@ -11,6 +11,10 @@
 
 # recommended apps
 @budgie-desktop-apps
+@libreoffice
+libreoffice-draw
+libreoffice-math
+thunderbird
 
 # Exclude unwanted packages from @anaconda-tools group
 -gfs2-utils
